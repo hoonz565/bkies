@@ -1,5 +1,5 @@
 import React from 'react';
-import BikeImage from '../assets/bike.png'; 
+import BikeImage from '../assets/bike.png';
 
 export default function Features() {
   const callouts = [
@@ -8,11 +8,11 @@ export default function Features() {
       title: 'Scan Student ID Card',
       subtitle: 'to unlock',
       icon: '🪪',
-      position: 'top-[8%] right-10 md:right-40', 
+      position: 'top-[8%] right-10 md:right-40',
       lineWidth: 'w-[238px]',
       lineAngle: 'rotate-[350deg]',
       linePosition: 'bottom-0 right-full',
-      dotPosition: 'right-[220px]', 
+      dotPosition: 'right-[220px]',
     },
     {
       id: 2,
@@ -23,7 +23,7 @@ export default function Features() {
       lineWidth: 'w-[140px]',
       lineAngle: 'rotate-[360deg]',
       linePosition: 'bottom-2 left-full',
-      dotPosition: 'left-[140px]', 
+      dotPosition: 'left-[140px]',
     },
   ];
 
@@ -41,7 +41,7 @@ export default function Features() {
 
         {/* Main Display Area */}
         <div className="relative flex justify-center items-center h-[600px] border-2 border-dashed border-gray-100 rounded-3xl p-10 bg-gray-50/50">
-          
+
           {/* Bike Image */}
           <div className="relative z-10 w-[1000px] md:w-[900px] h-auto group">
             <img src={BikeImage} alt="BKies Bike" className="w-full h-full object-contain group-hover:scale-105 transition-transform duration-500" />

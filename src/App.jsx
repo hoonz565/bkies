@@ -10,14 +10,25 @@ import Auth from './pages/Auth'
 
 function App() {
   const [showAuth, setShowAuth] = useState(false);
+  const [isLoggedIn, setIsLoggedIn] = useState(false);
 
   if (showAuth) {
-    return <Auth onBack={() => setShowAuth(false)} />;
+    return <Auth 
+      onBack={() => setShowAuth(false)} 
+      onLoginSuccess={() => {
+        setIsLoggedIn(true);
+        setShowAuth(false);
+      }} 
+    />;
   }
 
   return (
     <div className="min-h-screen font-sans bg-white">
-      <Navbar onLoginClick={() => setShowAuth(true)} />
+      <Navbar 
+        onLoginClick={() => setShowAuth(true)} 
+        isLoggedIn={isLoggedIn}
+        onLogout={() => setIsLoggedIn(false)}
+      />
       <Hero/>
       <About />
       <Features />

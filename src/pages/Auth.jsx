@@ -2,7 +2,7 @@ import React from 'react';
 import './Auth.css';
 import hcmutLogo from '../assets/hcmut_logo.png';
 
-export default function Auth({ onBack }) {
+export default function Auth({ onBack, onLoginSuccess }) {
   return (
     <div className="cas-page">
       <div className="cas-wrapper">
@@ -21,10 +21,10 @@ export default function Auth({ onBack }) {
               </div>
               
               <label className="cas-label" htmlFor="username">Username</label>
-              <input type="text" id="username" className="cas-input cas-input-user" autoFocus />
+              <input type="text" id="username" className="cas-input cas-input-user" autoFocus defaultValue="hung.nguyen565" />
               
               <label className="cas-label" htmlFor="password">Password</label>
-              <input type="password" id="password" className="cas-input cas-input-pass" />
+              <input type="password" id="password" className="cas-input cas-input-pass" defaultValue="password123!" />
               
               <div className="cas-checkbox-row">
                 <input type="checkbox" id="warn" />
@@ -32,7 +32,7 @@ export default function Auth({ onBack }) {
               </div>
               
               <div className="cas-btn-row">
-                <button type="button" className="cas-btn">Login</button>
+                <button type="button" className="cas-btn" onClick={onLoginSuccess}>Login</button>
                 <button type="button" className="cas-btn" style={{backgroundColor: '#1b65b6'}}>Clear</button>
               </div>
               
