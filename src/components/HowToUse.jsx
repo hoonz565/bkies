@@ -34,8 +34,8 @@ export default function HowToUse() {
               </div>
             ))}
           </div>
-          <div className="md:w-1/2 h-[500px] rounded-[2rem] overflow-hidden shadow-2xl">
-            <img src={steps[activeStep].img} alt="How it works" className="w-full h-full object-cover transition-all duration-700" />
+          <div className="md:w-1/2 rounded-[2rem] overflow-hidden shadow-2xl bg-white">
+            <img src={steps[activeStep].img} alt="How it works" className="w-full h-auto object-contain transition-all duration-700" />
           </div>
         </div>
       </div>
