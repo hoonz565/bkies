@@ -9,7 +9,7 @@ export default function Auth({ onBack }) {
         <div className="cas-container">
           <div className="cas-header">
             <div className="cas-logo-mock" onClick={onBack} style={{cursor: onBack ? 'pointer' : 'default'}}>
-              <img src={hcmutLogo} alt="HCMUT Logo" width="40" height="40" style={{ objectFit: 'contain' }} />
+              <img src={hcmutLogo} alt="HCMUT Logo" width="60" height="60" style={{ objectFit: 'contain' }} />
             </div>
             <div className="cas-title">Central Authentication Service</div>
           </div>
