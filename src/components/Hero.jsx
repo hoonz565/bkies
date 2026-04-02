@@ -11,7 +11,7 @@ export default function Hero() {
           <img 
             src={heroBikeBg}
             alt="BKies Bike Background" 
-            className="w-full h-full object-cover mix-blend-lighten opacity-60"
+            className="w-full h-full object-cover mix-blend-lighten opacity-90"
             style={{ objectPosition: '100% center' }}
           />
           <div className="absolute inset-0 bg-gradient-to-r from-[#0d0d0d] via-[#0d0d0d]/80 to-transparent"></div>
