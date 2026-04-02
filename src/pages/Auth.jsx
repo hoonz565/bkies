@@ -1,5 +1,6 @@
 import React from 'react';
 import './Auth.css';
+import hcmutLogo from '../assets/hcmut_logo.png';
 
 export default function Auth({ onBack }) {
   return (
@@ -8,11 +9,7 @@ export default function Auth({ onBack }) {
         <div className="cas-container">
           <div className="cas-header">
             <div className="cas-logo-mock" onClick={onBack} style={{cursor: onBack ? 'pointer' : 'default'}}>
-              <svg width="40" height="40" viewBox="0 0 40 40" xmlns="http://www.w3.org/2000/svg">
-                <polygon points="20,2 38,10 38,30 20,38 2,30 2,10" fill="#0d47a1" stroke="#42a5f5" strokeWidth="2"/>
-                <text x="50%" y="45%" dominantBaseline="middle" textAnchor="middle" fill="white" fontSize="12" fontFamily="sans-serif" fontWeight="bold">BK</text>
-                <text x="50%" y="75%" dominantBaseline="middle" textAnchor="middle" fill="#42a5f5" fontSize="8" fontFamily="sans-serif">TECH</text>
-              </svg>
+              <img src={hcmutLogo} alt="HCMUT Logo" width="40" height="40" style={{ objectFit: 'contain' }} />
             </div>
             <div className="cas-title">Central Authentication Service</div>
           </div>
