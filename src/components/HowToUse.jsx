@@ -1,10 +1,14 @@
 import { useState } from 'react';
+import step1Img from '../assets/step1.png';
+import step2Img from '../assets/step2.png';
+import step3Img from '../assets/step3.png';
+import step4Img from '../assets/step4.png';
 
 const steps = [
-  { id: '01', title: 'Tap Student ID', desc: 'Place your HCMUT ID on the RFID reader for quick validation.', img: 'https://via.placeholder.com/400x600?text=RFID+Tap' },
-  { id: '02', title: 'Instant Unlock', desc: 'The smart lock disengages within 3 seconds upon successful ID verification.', img: 'https://via.placeholder.com/400x600?text=Auto+Unlock' },
-  { id: '03', title: 'Commute Effortlessly', desc: 'Navigate between lecture halls efficiently using our 18kg lightweight e-bikes.', img: 'https://via.placeholder.com/400x600?text=Ride+BKies' },
-  { id: '04', title: 'Dock & Auto-pay', desc: 'Return the bike at any station. Your fare is automatically calculated based on distance.', img: 'https://via.placeholder.com/400x600?text=Auto+Payment' },
+  { id: '01', title: 'Tap Student ID', desc: 'Place your HCMUT ID on the RFID reader for quick validation.', img: step1Img },
+  { id: '02', title: 'Instant Unlock', desc: 'The smart lock disengages within 3 seconds upon successful ID verification.', img: step2Img },
+  { id: '03', title: 'Commute Effortlessly', desc: 'Navigate between lecture halls efficiently using our 18kg lightweight e-bikes.', img: step3Img },
+  { id: '04', title: 'Dock & Auto-pay', desc: 'Return the bike at any station. Your fare is automatically calculated based on distance.', img: step4Img },
 ];
 
 export default function HowToUse() {
