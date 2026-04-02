@@ -21,7 +21,7 @@ export default function Auth({ onBack, onLoginSuccess }) {
               </div>
               
               <label className="cas-label" htmlFor="username">Username</label>
-              <input type="text" id="username" className="cas-input cas-input-user" autoFocus defaultValue="hung.nguyen565" />
+              <input type="text" id="username" className="cas-input cas-input-user" autoFocus defaultValue="ahihi.123" />
               
               <label className="cas-label" htmlFor="password">Password</label>
               <input type="password" id="password" className="cas-input cas-input-pass" defaultValue="password123!" />
