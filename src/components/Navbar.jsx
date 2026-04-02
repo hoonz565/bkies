@@ -45,11 +45,13 @@ export default function Navbar({ onLoginClick, isLoggedIn, onLogout }) {
             <div className="relative">
               <button 
                 onClick={() => setShowDropdown(!showDropdown)} 
-                className="w-10 h-10 rounded-full bg-gray-200 border-2 border-green-500 overflow-hidden flex items-center justify-center focus:outline-none"
+                className={`w-11 h-11 rounded-full overflow-hidden flex items-center justify-center focus:outline-none transition-all duration-300 shadow-sm border-2 ${showDropdown ? 'border-blue-500 ring-4 ring-blue-100' : 'border-white hover:border-blue-500 hover:ring-4 hover:ring-blue-50'}`}
               >
-                <svg className="w-8 h-8 text-gray-400 mt-2" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
-                  <path fillRule="evenodd" d="M10 9a3 3 0 100-6 3 3 0 000 6zm-7 9a7 7 0 1114 0H3z" clipRule="evenodd" />
-                </svg>
+                <img 
+                  src="https://images.unsplash.com/photo-1535713875002-d1d0cf377fde?auto=format&fit=crop&w=150&q=80" 
+                  alt="User Avatar"
+                  className="w-full h-full object-cover"
+                />
               </button>
               
               {showDropdown && (

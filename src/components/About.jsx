@@ -7,9 +7,9 @@ export default function About() {
     <section id="about" className="py-20 bg-gray-50">
       <div className="container mx-auto px-6">
         {/* Text Content */}
-        <div className="max-w-4xl mx-auto mb-12">
-          <h2 className="text-4xl font-extrabold text-gray-900 mb-6 text-center">About BKies</h2>
-          <div className="space-y-4 text-gray-600 leading-relaxed text-lg text-left">
+        <div className="max-w-4xl mb-12">
+          <h2 className="text-4xl font-extrabold text-gray-900 mb-6">About BKies</h2>
+          <div className="space-y-4 text-gray-600 leading-relaxed text-lg">
             <p>
               <span className="font-bold text-blue-700">BKies</span> is a public bike-sharing service service designed specifically for students
               and faculty at Ho Chi Minh City University of Technology (HCMUT).
@@ -30,7 +30,7 @@ export default function About() {
         </div>
 
         {/* Campus Images */}
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-8 md:gap-12 mt-12 max-w-5xl mx-auto">
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-8 md:gap-12 mt-12 max-w-5xl">
 
           {/* Campus 1 */}
           <div className="md:col-span-1 rounded-3xl overflow-hidden shadow-2xl border-8 border-gray-100 h-[300px] hover:scale-105 transition-transform duration-300">
