@@ -8,13 +8,10 @@ export default function Features() {
       title: 'Scan Student ID Card',
       subtitle: 'to unlock',
       icon: '🪪',
-      // Vị trí của cả cái box
       position: 'top-[8%] right-10 md:right-40', 
       lineWidth: 'w-[238px]',
       lineAngle: 'rotate-[350deg]',
       linePosition: 'bottom-0 right-full',
-      // SETTING RIÊNG CHO DOT 1:
-      // Bạn có thể dùng right-[...px] hoặc left-[...px] tùy ý
       dotPosition: 'right-[220px]', 
     },
     {
@@ -22,11 +19,10 @@ export default function Features() {
       title: 'Wheel Sensor',
       subtitle: 'to track distance',
       icon: '📏',
-      position: 'top-[30%] left-20 md:left-40', // Lưu ý: Mình sửa md:right-40 thành md:left-40 cho logic bên trái
+      position: 'top-[30%] left-20 md:left-40',
       lineWidth: 'w-[140px]',
       lineAngle: 'rotate-[360deg]',
       linePosition: 'bottom-2 left-full',
-      // SETTING RIÊNG CHO DOT 2:
       dotPosition: 'left-[140px]', 
     },
   ];
@@ -36,7 +32,7 @@ export default function Features() {
       <div className="container mx-auto px-6 text-center">
         {/* Title Section */}
         <div className="mb-20">
-          <h2 className="text-4xl font-black text-gray-900 uppercase tracking-tight">Technical Implementation</h2>
+          <h2 className="text-4xl font-black text-gray-900 uppercase tracking-tight">Features</h2>
           <div className="w-20 h-1 bg-blue-600 mx-auto mt-4"></div>
           <p className="mt-6 text-gray-500 max-w-lg mx-auto">
             A requirement-driven system utilizing existing campus infrastructure and precise sensing technology.
@@ -68,7 +64,6 @@ export default function Features() {
 
               {/* Line Container */}
               <div className={`hidden md:block absolute ${c.linePosition} ${c.lineWidth} h-px bg-blue-400/50 origin-left ${c.lineAngle}`}>
-                {/* DYNAMIC DOT: Chỗ này sẽ dùng c.dotPosition để tùy chỉnh riêng biệt */}
                 <div className={`absolute ${c.dotPosition} top-1/2 -translate-y-1/2 w-3 h-3 bg-blue-600 rounded-full border-4 border-white shadow-md`}></div>
               </div>
             </div>

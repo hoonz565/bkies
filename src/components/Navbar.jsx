@@ -1,4 +1,4 @@
-export default function Navbar() {
+export default function Navbar({ onLoginClick }) {
   const menuItems = [
     { name: 'About', href: '#about' },
     { name: 'Features', href: '#features' },
@@ -31,7 +31,7 @@ export default function Navbar() {
 
         {/* Action Buttons */}
         <div className="flex gap-4 items-center">
-          <button className="text-gray-600 font-semibold hover:text-blue-600">Login</button>
+          <button onClick={onLoginClick} className="text-gray-600 font-semibold hover:text-blue-600">Login</button>
           <button className="bg-blue-600 text-white px-6 py-2 rounded-full font-bold hover:bg-blue-700 transition shadow-md">
             Get App
           </button>
