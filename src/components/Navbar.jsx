@@ -36,12 +36,9 @@ export default function Navbar({ onLoginClick, isLoggedIn, onLogout }) {
         {/* Action Buttons / Avatar */}
         <div className="flex gap-4 items-center">
           {!isLoggedIn ? (
-            <>
-              <button onClick={onLoginClick} className="text-gray-600 font-semibold hover:text-blue-600">Login</button>
-              <button className="bg-blue-600 text-white px-6 py-2 rounded-full font-bold hover:bg-blue-700 transition shadow-md">
-                Get App
-              </button>
-            </>
+            <button onClick={onLoginClick} className="bg-blue-600 text-white px-8 py-2.5 rounded-full font-bold hover:bg-blue-700 transition shadow-md">
+              Login
+            </button>
           ) : (
             <div className="relative">
               <button 
