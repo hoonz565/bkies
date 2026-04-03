@@ -15,26 +15,27 @@ export default function HowToUse() {
   const [activeStep, setActiveStep] = useState(0);
 
   return (
-    <section id="how-to-use" className="py-24 bg-gray-50">
-      <div className="container mx-auto px-6">
-        <h2 className="text-4xl font-black text-gray-900 mb-16 text-center uppercase">HOW TO USE</h2>
-        <div className="flex flex-col md:flex-row gap-16 items-center">
-          <div className="md:w-1/2 space-y-4">
+    <section id="how-to-use" className="py-16 md:py-24 bg-gray-50">
+      <div className="container mx-auto px-4 md:px-6">
+        <h2 className="text-3xl md:text-4xl font-black text-gray-900 mb-10 md:mb-16 text-center uppercase">HOW TO USE</h2>
+        <div className="flex flex-col md:flex-row gap-8 md:gap-16 items-center">
+          <div className="w-full md:w-1/2 space-y-3">
             {steps.map((step, index) => (
-              <div 
+              <div
                 key={index}
                 onMouseEnter={() => setActiveStep(index)}
-                className={`cursor-pointer p-6 rounded-2xl transition-all border-l-4 ${activeStep === index ? 'bg-white shadow-xl border-blue-600 scale-105' : 'border-transparent opacity-50'}`}
+                onClick={() => setActiveStep(index)}
+                className={`cursor-pointer p-5 md:p-6 rounded-2xl transition-all border-l-4 select-none ${activeStep === index ? 'bg-white shadow-xl border-blue-600 scale-[1.02] md:scale-105' : 'border-transparent opacity-50'}`}
               >
                 <div className="flex items-center gap-4">
-                  <span className="text-2xl font-black text-blue-600">{step.id}</span>
-                  <h3 className="text-xl font-bold text-gray-900">{step.title}</h3>
+                  <span className="text-xl md:text-2xl font-black text-blue-600 flex-shrink-0">{step.id}</span>
+                  <h3 className="text-lg md:text-xl font-bold text-gray-900">{step.title}</h3>
                 </div>
-                {activeStep === index && <p className="mt-4 text-gray-600 leading-relaxed">{step.desc}</p>}
+                {activeStep === index && <p className="mt-3 text-gray-600 leading-relaxed text-sm md:text-base">{step.desc}</p>}
               </div>
             ))}
           </div>
-          <div className="md:w-1/2 rounded-[2rem] overflow-hidden shadow-2xl bg-white">
+          <div className="w-full md:w-1/2 rounded-[1.5rem] md:rounded-[2rem] overflow-hidden shadow-2xl bg-white">
             <img src={steps[activeStep].img} alt="How it works" className="w-full h-auto object-contain transition-all duration-700" />
           </div>
         </div>
