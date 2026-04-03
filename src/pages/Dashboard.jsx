@@ -61,9 +61,9 @@ export default function Dashboard() {
             <div className="flex flex-col items-center flex-1 w-full justify-center">
               <div className="bg-white p-3 rounded-2xl mb-4 border border-gray-100 shadow-sm w-[160px] h-[160px] flex items-center justify-center">
                 <img
-                  src="https://upload.wikimedia.org/wikipedia/commons/d/d0/QR_code_for_mobile_English_Wikipedia.svg"
+                  src={`https://api.qrserver.com/v1/create-qr-code/?size=200x200&data=${encodeURIComponent('https://www.youtube.com/watch?v=PKQPey6L42M')}`}
                   alt="Top Up QR Code"
-                  className="w-full h-full object-contain opacity-90 mix-blend-multiply"
+                  className="w-full h-full object-contain rounded-xl"
                 />
               </div>
               <Link
