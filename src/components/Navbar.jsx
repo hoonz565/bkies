@@ -57,7 +57,7 @@ export default function Navbar({ onLoginClick, isLoggedIn, onLogout }) {
               
               {showDropdown && (
                 <div className="absolute right-0 mt-2 w-48 bg-white rounded-md shadow-xl py-2 z-50 border">
-                  <Link to="#" className="block px-4 py-3 text-sm text-gray-700 hover:bg-gray-100" onClick={() => setShowDropdown(false)}>Personal Information</Link>
+                  <Link to="/Profile" className="block px-4 py-3 text-sm text-gray-700 hover:bg-gray-100" onClick={() => setShowDropdown(false)}>Dashboard</Link>
                   <Link to="/Payment" className="block px-4 py-3 text-sm text-gray-700 hover:bg-gray-100" onClick={() => setShowDropdown(false)}>Payment</Link>
                   <div className="border-t my-1"></div>
                   <button 
