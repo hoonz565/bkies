@@ -10,7 +10,8 @@
 }
 
 .cas-wrapper {
-  width: 960px;
+  width: 1400px;
+  max-width: 95%;
   margin-top: 20px;
 }
 
@@ -51,7 +52,7 @@
 }
 
 .cas-left {
-  width: 300px;
+  width: 600px;
   background-color: #f0f0f0;
   padding: 15px 20px 20px;
   margin-right: 30px;
