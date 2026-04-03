@@ -1,4 +1,5 @@
 import { useState } from 'react'
+import { Routes, Route } from 'react-router-dom'
 import Navbar from './components/Navbar'
 import Hero from './components/Hero'
 import Features from './components/Features'
@@ -7,6 +8,7 @@ import HowToUse from './components/HowToUse'
 import Pricing from './components/Pricing'
 import Footer from './components/Footer'
 import Auth from './pages/Auth'
+import Payment from './pages/Payment'
 
 function App() {
   const [showAuth, setShowAuth] = useState(false);
@@ -29,11 +31,18 @@ function App() {
         isLoggedIn={isLoggedIn}
         onLogout={() => setIsLoggedIn(false)}
       />
-      <Hero/>
-      <About />
-      <Features />
-      <HowToUse />
-      <Pricing />
+      <Routes>
+        <Route path="/" element={
+          <>
+            <Hero/>
+            <About />
+            <Features />
+            <HowToUse />
+            <Pricing />
+          </>
+        } />
+        <Route path="/Payment" element={<Payment />} />
+      </Routes>
       <Footer />
     </div>
   )

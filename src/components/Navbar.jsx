@@ -1,22 +1,23 @@
 import { useState } from 'react';
+import { Link } from 'react-router-dom';
 
 export default function Navbar({ onLoginClick, isLoggedIn, onLogout }) {
   const [showDropdown, setShowDropdown] = useState(false);
   const menuItems = [
-    { name: 'About', href: '#about' },
-    { name: 'Features', href: '#features' },
-    { name: 'How to use', href: '#how-to-use' },
-    { name: 'Pricing', href: '#pricing' },
+    { name: 'About', href: '/#about' },
+    { name: 'Features', href: '/#features' },
+    { name: 'How to use', href: '/#how-to-use' },
+    { name: 'Pricing', href: '/#pricing' },
   ];
 
   return (
     <nav className="fixed top-0 left-0 w-full z-50 bg-white/90 backdrop-blur-md shadow-sm">
       <div className="w-full px-6 md:px-12 py-4 flex justify-between items-center">
         {/* Logo */}
-        <div className="flex items-center gap-2 cursor-pointer" onClick={() => window.scrollTo(0,0)}>
+        <Link to="/" className="flex items-center gap-2 cursor-pointer">
           <div className="w-10 h-10 bg-blue-700 rounded-lg flex items-center justify-center text-white font-black text-xl">B</div>
           <span className="text-2xl font-black text-blue-900 tracking-tighter uppercase">BKies</span>
-        </div>
+        </Link>
 
         {/* Dynamic Menu Links */}
         <ul className="hidden md:flex gap-8 font-semibold text-gray-600">
@@ -56,8 +57,8 @@ export default function Navbar({ onLoginClick, isLoggedIn, onLogout }) {
               
               {showDropdown && (
                 <div className="absolute right-0 mt-2 w-48 bg-white rounded-md shadow-xl py-2 z-50 border">
-                  <a href="#" className="block px-4 py-3 text-sm text-gray-700 hover:bg-gray-100">Personal Information</a>
-                  <a href="#" className="block px-4 py-3 text-sm text-gray-700 hover:bg-gray-100">Payment</a>
+                  <Link to="#" className="block px-4 py-3 text-sm text-gray-700 hover:bg-gray-100" onClick={() => setShowDropdown(false)}>Personal Information</Link>
+                  <Link to="/Payment" className="block px-4 py-3 text-sm text-gray-700 hover:bg-gray-100" onClick={() => setShowDropdown(false)}>Payment</Link>
                   <div className="border-t my-1"></div>
                   <button 
                     onClick={() => { onLogout(); setShowDropdown(false); }} 
