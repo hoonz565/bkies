@@ -1,7 +1,9 @@
 @import "tailwindcss";
+
 html {
   scroll-behavior: smooth;
 }
+
 /* Thêm một chút để mượt mà hơn */
 body {
   margin: 0;
