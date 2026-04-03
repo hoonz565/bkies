@@ -1,7 +1,7 @@
 import { BadgeCheck, MapPin, Leaf, Flame, ArrowRight } from 'lucide-react';
 import { Link } from 'react-router-dom';
 
-export default function PersonalInformation() {
+export default function Dashboard() {
   const recentTrips = [
     { id: 1, date: '03 Apr 2026', route: 'H6 -> H1', distance: '850m', cost: '2,000 VND' },
     { id: 2, date: '02 Apr 2026', route: 'Library -> H3', distance: '1.2km', cost: '3,000 VND' },

@@ -9,7 +9,7 @@ import Pricing from './components/Pricing'
 import Footer from './components/Footer'
 import Auth from './pages/Auth'
 import Payment from './pages/Payment'
-import PersonalInformation from './pages/PersonalInformation'
+import Dashboard from './pages/Dashboard'
 
 function App() {
   const [showAuth, setShowAuth] = useState(false);
@@ -43,7 +43,7 @@ function App() {
           </>
         } />
         <Route path="/Payment" element={<Payment />} />
-        <Route path="/Profile" element={<PersonalInformation />} />
+        <Route path="/Profile" element={<Dashboard />} />
       </Routes>
       <Footer />
     </div>
