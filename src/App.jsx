@@ -32,8 +32,7 @@ function FadeWrapper({ children }) {
     </div>
   );
 }
-
-function AppRoutes({ isLoggedIn, onLogout, onLoginClick }) {
+ b b    function AppRoutes({ isLoggedIn, onLogout, onLoginClick }) {
   return (
     <>
       <Navbar

@@ -18,7 +18,6 @@ export default function Footer() {
           <h5 className="font-bold mb-6">Contact</h5>
           <ul className="space-y-4 text-gray-400">
             <li>info@bkies.hcmut.edu.vn</li>
-            <li>+84 1900 XXXX</li>
           </ul>
         </div>
       </div>
