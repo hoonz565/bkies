@@ -1,5 +1,5 @@
 import { useState, useEffect } from 'react'
-import { Routes, Route, useLocation } from 'react-router-dom'
+import { Routes, Route, useLocation, Navigate } from 'react-router-dom'
 import Navbar from './components/Navbar'
 import Hero from './components/Hero'
 import Features from './components/Features'
@@ -11,6 +11,15 @@ import Auth from './pages/Auth'
 import Payment from './pages/Payment'
 import Dashboard from './pages/Dashboard'
 import PageTransition from './components/PageTransition'
+
+// Admin imports
+import { AdminProvider, AdminRoute } from './admin/AdminContext'
+import AdminLogin from './admin/AdminLogin'
+import AdminLayout from './admin/AdminLayout'
+import AdminDashboard from './admin/AdminDashboard'
+import CampusMap from './admin/CampusMap'
+import BikeManagement from './admin/BikeManagement'
+import UserManagement from './admin/UserManagement'
 
 // Fade wrapper for Auth modal-style appearance
 function FadeWrapper({ children }) {
@@ -32,7 +41,8 @@ function FadeWrapper({ children }) {
     </div>
   );
 }
-    function AppRoutes({ isLoggedIn, onLogout, onLoginClick }) {
+
+function AppRoutes({ isLoggedIn, onLogout, onLoginClick }) {
   return (
     <>
       <Navbar
@@ -63,6 +73,35 @@ function FadeWrapper({ children }) {
 function App() {
   const [showAuth, setShowAuth] = useState(false);
   const [isLoggedIn, setIsLoggedIn] = useState(false);
+  const location = useLocation();
+
+  // Check if we're on an admin route
+  const isAdminRoute = location.pathname.startsWith('/admin');
+
+  // If on admin route, render admin pages
+  if (isAdminRoute) {
+    return (
+      <AdminProvider>
+        <Routes>
+          <Route path="/admin/login" element={<AdminLogin />} />
+          <Route
+            path="/admin"
+            element={
+              <AdminRoute>
+                <AdminLayout />
+              </AdminRoute>
+            }
+          >
+            <Route index element={<Navigate to="/admin/dashboard" replace />} />
+            <Route path="dashboard" element={<AdminDashboard />} />
+            <Route path="map" element={<CampusMap />} />
+            <Route path="bikes" element={<BikeManagement />} />
+            <Route path="users" element={<UserManagement />} />
+          </Route>
+        </Routes>
+      </AdminProvider>
+    );
+  }
 
   if (showAuth) {
     return (
