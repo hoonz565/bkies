@@ -6,14 +6,14 @@ export default function Footer() {
           <div className="text-2xl font-black mb-6">BKies</div>
           <p className="text-gray-400">Smart mobility for the smart generation at HCMUT.</p>
         </div>
-        <div>
+        {/* <div>
           <h5 className="font-bold mb-6">Quick Links</h5>
           <ul className="space-y-4 text-gray-400">
             <li className="hover:text-white cursor-pointer transition">Guide</li>
             <li className="hover:text-white cursor-pointer transition">Pricing</li>
             <li className="hover:text-white cursor-pointer transition">Stations</li>
           </ul>
-        </div>
+        </div> */}
         <div>
           <h5 className="font-bold mb-6">Contact</h5>
           <ul className="space-y-4 text-gray-400">
